@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+cat = User.create(name: 'Catherine')
+top = Topic.create(name: 'Code')
+
+first = Task.create(title: 'Practice', content: 'will this work', deadline: 'null', user_id: 1, topic_id: 1)
