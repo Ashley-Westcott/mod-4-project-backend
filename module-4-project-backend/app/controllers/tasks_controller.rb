@@ -10,8 +10,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new
-    # (id: params[:id], user_id: params[:user_id], topic_id: params[:topic_id], title: params[:title], content: params[:content])
+    # task_params
+    byebug
+    @task = Task.new(id: params[:id], user_id: params[:user_id], topic_id: params[:topic_id], title: params[:title], content: params[:content], deadline: params[:deadline])
     @task.save
 
   end
@@ -36,5 +37,10 @@ class TasksController < ApplicationController
 
   end
 
+# private
+#
+# def task_params
+#   params.require(:task).permit(:title, :content, :deadline, :user_id, :topic_id)
+# end
 
 end
