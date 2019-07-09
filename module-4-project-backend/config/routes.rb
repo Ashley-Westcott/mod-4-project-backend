@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :tasks
   resources :topics
   resources :users
+
+  post '/new-task', to: 'tasks#new_task'
 end
